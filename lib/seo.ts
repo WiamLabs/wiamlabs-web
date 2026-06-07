@@ -54,6 +54,11 @@ export function buildMetadata({
     authors: [{ name: FOUNDER_NAME }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
+    icons: {
+      icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+      apple: [{ url: "/brand/logo-512.svg", type: "image/svg+xml" }],
+    },
+    manifest: "/manifest.webmanifest",
   };
 }
 

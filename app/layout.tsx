@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { OrganizationJsonLd } from "@/components/layout/OrganizationJsonLd";
+import { WebsiteJsonLd } from "@/components/layout/WebsiteJsonLd";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteNav } from "@/components/layout/SiteNav";
 import { buildMetadata } from "@/lib/seo";
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.variable}>
         <OrganizationJsonLd />
+        <WebsiteJsonLd />
         <SiteNav />
         <main>{children}</main>
         <SiteFooter />

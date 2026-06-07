@@ -8,7 +8,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/brand/logo.svg`,
+    logo: `${SITE_URL}/brand/logo-512.svg`,
     founder: {
       "@type": "Person",
       name: FOUNDER_NAME,

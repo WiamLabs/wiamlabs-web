@@ -9,14 +9,15 @@ import { getProduct, products } from "@/lib/products";
 import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props) {
-  const product = getProduct(params.slug);
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const product = getProduct(slug);
   if (!product) return {};
   return buildMetadata({
     title: product.name,
@@ -25,8 +26,9 @@ export function generateMetadata({ params }: Props) {
   });
 }
 
-export default function ProductDetailPage({ params }: Props) {
-  const product = getProduct(params.slug);
+export default async function ProductDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const product = getProduct(slug);
   if (!product) notFound();
 
   const others = products.filter((p) => p.slug !== product.slug);

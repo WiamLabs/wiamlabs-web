@@ -40,6 +40,18 @@ Copy `.env.example` to `.env.local`:
 
 SSL is automatic on both Vercel and Cloudflare.
 
+## Phase 1 launch checklist (Martin)
+
+- [ ] Site live at `https://wiamlabs.com`
+- [ ] Contact form sends email (Resend + Vercel env vars)
+- [ ] `wiamtrade.wiamlabs.com` points to WiamTrade mini app (Cloudflare CNAME + Render)
+- [ ] [Google Search Console](https://search.google.com/search-console) → add property → submit `https://wiamlabs.com/sitemap.xml`
+- [ ] [Bing Webmaster](https://www.bing.com/webmasters) → same sitemap
+
+## Stack
+
+Next.js 15 · React 19 · Vercel Hobby (free)
+
 ## Founder
 
 Martin — WiamLabs

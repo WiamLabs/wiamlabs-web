@@ -7,14 +7,15 @@ import { getNewsPost, newsPosts } from "@/lib/products";
 import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return newsPosts.map((n) => ({ slug: n.slug }));
 }
 
-export function generateMetadata({ params }: Props) {
-  const post = getNewsPost(params.slug);
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const post = getNewsPost(slug);
   if (!post) return {};
   return buildMetadata({
     title: post.title,
@@ -23,8 +24,9 @@ export function generateMetadata({ params }: Props) {
   });
 }
 
-export default function NewsArticlePage({ params }: Props) {
-  const post = getNewsPost(params.slug);
+export default async function NewsArticlePage({ params }: Props) {
+  const { slug } = await params;
+  const post = getNewsPost(slug);
   if (!post) notFound();
 
   return (
