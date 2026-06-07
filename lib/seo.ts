@@ -17,7 +17,7 @@ export function buildMetadata({
   title,
   description = defaultDescription,
   path = "",
-  image = "/brand/og-card.svg",
+  image = "/opengraph-image",
 }: PageMeta = {}): Metadata {
   const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Building Africa's Digital Products`;
   const url = `${SITE_URL}${path}`;

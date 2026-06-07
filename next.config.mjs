@@ -2,12 +2,17 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   poweredByHeader: false,
-  images: {
-    unoptimized: true,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.wiamlabs.com" }],
+        destination: "https://wiamlabs.com/:path*",
+        permanent: true,
+      },
+    ];
   },
-  trailingSlash: false,
 };
 
 export default nextConfig;
