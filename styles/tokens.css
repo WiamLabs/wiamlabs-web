@@ -1,0 +1,31 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+:root {
+  --color-navy: #08081a;
+  --color-navy-deep: #080d1a;
+  --color-card: #111b30;
+  --color-card-hover: #162038;
+  --color-gold: #d4a017;
+  --color-gold-alt: #d4af37;
+  --color-gold-hover: #e6b422;
+  --color-white: #ffffff;
+  --color-text: #e8edf5;
+  --color-text-muted: #7b8aa5;
+  --color-border: rgba(123, 138, 165, 0.22);
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 60px rgba(212, 160, 23, 0.12);
+
+  --nav-height: 72px;
+  --max-width: 1180px;
+  --transition-fast: 150ms ease;
+}

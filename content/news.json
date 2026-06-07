@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "introducing-wiamlabs",
+    "title": "Introducing WiamLabs",
+    "excerpt": "WiamLabs is the technology house behind WiamApp and WiamTrade — built in Ghana for Africa.",
+    "date": "2026-06-01",
+    "author": "WiamLabs",
+    "tag": "Company",
+    "body": [
+      "WiamLabs is a Ghana-based technology company founded by Martin. Our mission is to build digital products that solve real problems for African users — with trust, clarity, and world-class design.",
+      "Today we operate two live products: WiamApp, a services marketplace that connects customers with verified workers, and WiamTrade, a non-custodial trading platform inside Telegram.",
+      "This website is our home on the open web. Search for WiamLabs — we are here."
+    ]
+  },
+  {
+    "slug": "wiamapp-marketplace-for-africa",
+    "title": "WiamApp: Marketplace for Africa",
+    "excerpt": "How WiamApp helps customers book verified workers in their city in real time.",
+    "date": "2026-06-03",
+    "author": "WiamLabs",
+    "tag": "WiamApp",
+    "body": [
+      "Finding reliable skilled workers should not be a gamble. WiamApp brings verified professionals — electricians, plumbers, cleaners, and more — into one trusted marketplace.",
+      "Customers book in real time. Workers build formal reputation. Everyone wins when trust is built into the product from day one.",
+      "Visit wiamapp.com to get started."
+    ]
+  },
+  {
+    "slug": "wiamtrade-practice-trading",
+    "title": "WiamTrade: Practice Trading on Live Markets",
+    "excerpt": "Practice crypto, forex, and African stocks with $1M virtual — then go live when you are ready.",
+    "date": "2026-06-05",
+    "author": "WiamLabs",
+    "tag": "WiamTrade",
+    "body": [
+      "WiamTrade lets you practice on live market charts with $1M virtual capital — no broker API keys required. Switch to live mode only when you choose to connect your exchange.",
+      "We never hold your funds. Your keys, your trades, your control.",
+      "Open @WiamTradeBot on Telegram to begin."
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  backdrop-filter: blur(16px);
+  background: rgba(8, 8, 26, 0.82);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.links a:hover,
+.links a[data-active="true"] {
+  color: var(--color-white);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.menuBtn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+.drawer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .links,
+  .actions .hideMobile {
+    display: none;
+  }
+
+  .menuBtn {
+    display: inline-flex;
+  }
+
+  .drawerOpen .drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--nav-height);
+    padding: 1.25rem 1.25rem 1.5rem;
+    background: rgba(8, 8, 26, 0.98);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .drawer a {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0.35rem 0;
+  }
+}

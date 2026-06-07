@@ -1,0 +1,11 @@
+<!-- © 2026 WiamLabs. All rights reserved. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WiamLabs">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#08081A"/>
+  <path d="M14 42 L22 18 L32 34 L42 18 L50 42 L44 42 L40 30 L32 42 L24 30 L20 42 Z" fill="url(#g)"/>
+</svg>

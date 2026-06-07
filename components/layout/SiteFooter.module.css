@@ -1,0 +1,75 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-navy-deep);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.brand p {
+  color: var(--color-text-muted);
+  max-width: 28ch;
+  margin: 0.75rem 0 0;
+  font-size: 0.92rem;
+}
+
+.col h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.col a {
+  color: var(--color-text);
+  font-size: 0.92rem;
+  transition: color var(--transition-fast);
+}
+
+.col a:hover {
+  color: var(--color-gold);
+}
+
+.bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}

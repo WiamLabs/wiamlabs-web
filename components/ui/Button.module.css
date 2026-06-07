@@ -1,0 +1,66 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--color-gold-hover);
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-border);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.ghost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+  border-color: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+}
+
+.lg {
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+}
+
+.full {
+  width: 100%;
+}

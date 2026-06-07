@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WiamLabs Website
 
-## Getting Started
+© 2026 WiamLabs. All rights reserved.
 
-First, run the development server:
+Public company site for **wiamlabs.com** — built from `WIAMLABS_WEBSITE_MASTER_PLAN.md`.
+
+**Hosting:** [Cloudflare Pages](https://pages.cloudflare.com/) (free tier).
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The contact form API runs on Cloudflare Pages Functions in production. Locally, form submit may show a config message until deployed.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment (Cloudflare Pages dashboard)
 
-## Learn More
+Set under **Workers & Pages → your project → Settings → Environment variables**:
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Example |
+|----------|---------|
+| `RESEND_API_KEY` | `re_...` |
+| `CONTACT_TO_EMAIL` | `hello@wiamlabs.com` |
+| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optional (SEO canonical URLs):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Example |
+|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | `https://wiamlabs.com` |
+| `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
+| `NEXT_PUBLIC_WIAMTRADE_URL` | `https://t.me/WiamTradeBot` |
 
-## Deploy on Vercel
+## Deploy on Cloudflare Pages (free)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub (`github.com/WiamLabs/wiamlabs-web`).
+2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+3. Select the repo and use these build settings:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   | Setting | Value |
+   |---------|-------|
+   | Framework preset | `Next.js (Static HTML Export)` or None |
+   | Build command | `npm run build` |
+   | Build output directory | `out` |
+
+4. Add environment variables (table above).
+5. **Custom domains** → add `wiamlabs.com` (and `www.wiamlabs.com` if you use it).
+6. **Redirect www → apex** (recommended): Rules → Redirect Rules →  
+   `www.wiamlabs.com/*` → `https://wiamlabs.com/$1` (301).
+
+Domain is already on Cloudflare — SSL is automatic.
+
+## Founder
+
+Martin — WiamLabs

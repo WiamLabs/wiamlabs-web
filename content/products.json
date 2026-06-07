@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "wiamapp",
+    "name": "WiamApp",
+    "tagline": "Africa's trusted services marketplace.",
+    "status": "live",
+    "externalUrl": "https://wiamapp.com",
+    "ctaLabel": "Visit WiamApp",
+    "copyright": "© 2026 WiamApp. Powered by WiamLabs",
+    "pitch": "WiamApp connects customers with verified skilled workers in their city — electricians, plumbers, cleaners, and more. Book in real time. Pay securely. Build trust.",
+    "features": [
+      "Verified worker profiles and WiaMid identity",
+      "Real-time booking and job tracking",
+      "Customer and worker apps (iOS, Android)",
+      "Spotlight, trust scores, and safety systems"
+    ],
+    "accent": "gold"
+  },
+  {
+    "slug": "wiamtrade",
+    "name": "WiamTrade",
+    "tagline": "Trade crypto, forex, and African stocks — your keys, your funds.",
+    "status": "live",
+    "externalUrl": "https://t.me/WiamTradeBot",
+    "ctaLabel": "Open in Telegram",
+    "copyright": "© 2026 WiamTrade. Powered by WiamLabs",
+    "pitch": "WiamTrade is a non-custodial trading experience inside Telegram. Practice with $1M virtual on live charts, or connect your broker when you are ready for live trading.",
+    "features": [
+      "Practice mode — crypto, forex, stocks (no broker keys required)",
+      "Live mode — connect Binance and more",
+      "Live charts and African currency display",
+      "WiamTrade Pro subscription via Paystack"
+    ],
+    "accent": "navy"
+  }
+]

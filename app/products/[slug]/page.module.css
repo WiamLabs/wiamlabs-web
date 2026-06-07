@@ -1,0 +1,90 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.page {
+  padding-bottom: 4rem;
+}
+
+.heroVisual {
+  height: 220px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.wiamapp {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.3), rgba(8, 8, 26, 0.95));
+  color: var(--color-gold);
+}
+
+.wiamtrade {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(8, 8, 26, 0.95));
+  color: #93c5fd;
+}
+
+.pitch {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  max-width: 68ch;
+  margin-bottom: 2rem;
+}
+
+.features h2,
+.more h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--color-text-muted);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.more {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.moreCard {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: border-color var(--transition-fast);
+}
+
+.moreCard:hover {
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.moreCard strong {
+  display: block;
+  color: var(--color-white);
+  margin-bottom: 0.25rem;
+}

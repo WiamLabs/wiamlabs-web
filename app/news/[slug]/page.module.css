@@ -1,0 +1,30 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.page {
+  padding-bottom: 4rem;
+  max-width: 760px;
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.body p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
