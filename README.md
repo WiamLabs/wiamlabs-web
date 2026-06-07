@@ -22,11 +22,11 @@ Copy `.env.example` to `.env.local`:
 | Variable | Example |
 |----------|---------|
 | `RESEND_API_KEY` | `re_...` |
-| `CONTACT_TO_EMAIL` | `hello@wiamlabs.com` |
-| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` |
+| `CONTACT_TO_EMAIL` | `founder@wiamapp.com` (inbox you read) |
+| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` (must be verified in Resend) |
 | `NEXT_PUBLIC_SITE_URL` | `https://wiamlabs.com` |
 | `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
-| `NEXT_PUBLIC_WIAMTRADE_URL` | `https://t.me/WiamTradeBot` |
+| `NEXT_PUBLIC_WIAMTRADE_URL` | `https://wiamtrade.wiamlabs.com` |
 
 ## Deploy on Vercel (free)
 

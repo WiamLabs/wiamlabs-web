@@ -71,8 +71,10 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || "hello@wiamlabs.com";
-  const from = process.env.CONTACT_FROM_EMAIL || "hello@wiamlabs.com";
+  const to = process.env.CONTACT_TO_EMAIL || "founder@wiamapp.com";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamlabs.com";
+  const from =
+    process.env.CONTACT_FROM_ADDRESS || `WiamLabs <${fromEmail}>`;
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
@@ -102,7 +104,7 @@ export async function POST(req: NextRequest) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: `WiamLabs <${from}>`,
+      from,
       to: [to],
       reply_to: email,
       subject: `[WiamLabs Contact] ${subject}`,
@@ -111,7 +113,29 @@ export async function POST(req: NextRequest) {
   });
 
   if (!res.ok) {
-    return NextResponse.json({ error: "Failed to send email. Try again later." }, { status: 502 });
+    let userMessage = "Failed to send email. Try again later.";
+    try {
+      const err = (await res.json()) as { message?: string };
+      const msg = err.message || "";
+      console.error("[contact] Resend error:", res.status, msg);
+
+      if (/not verified|verify your domain/i.test(msg)) {
+        userMessage =
+          "Sender domain not verified in Resend yet. Finish wiamlabs.com DNS in Resend, then redeploy.";
+      } else if (/only send testing emails/i.test(msg)) {
+        userMessage =
+          "Resend is in test mode. Verify wiamlabs.com in Resend Domains first.";
+      } else if (/invalid from/i.test(msg)) {
+        userMessage =
+          "Invalid sender address. Set CONTACT_FROM_EMAIL to an address on your verified Resend domain.";
+      } else if (msg) {
+        userMessage = msg;
+      }
+    } catch {
+      console.error("[contact] Resend error:", res.status);
+    }
+
+    return NextResponse.json({ error: userMessage }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

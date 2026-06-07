@@ -2,6 +2,7 @@
 
 import productsData from "@/content/products.json";
 import newsData from "@/content/news.json";
+import { WIAMAPP_URL, WIAMTRADE_URL } from "./site";
 
 export type Product = {
   slug: string;
@@ -26,7 +27,23 @@ export type NewsPost = {
   body: string[];
 };
 
-export const products = productsData as Product[];
+const baseProducts = productsData as Product[];
+
+function withLiveUrls(product: Product): Product {
+  if (product.slug === "wiamapp") {
+    return { ...product, externalUrl: WIAMAPP_URL };
+  }
+  if (product.slug === "wiamtrade") {
+    return {
+      ...product,
+      externalUrl: WIAMTRADE_URL,
+      ctaLabel: "Open WiamTrade",
+    };
+  }
+  return product;
+}
+
+export const products = baseProducts.map(withLiveUrls);
 export const newsPosts = newsData as NewsPost[];
 
 export function getProduct(slug: string): Product | undefined {

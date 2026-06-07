@@ -21,8 +21,8 @@
     "name": "WiamTrade",
     "tagline": "Trade crypto, forex, and African stocks — your keys, your funds.",
     "status": "live",
-    "externalUrl": "https://t.me/WiamTradeBot",
-    "ctaLabel": "Open in Telegram",
+    "externalUrl": "https://wiamtrade.wiamlabs.com",
+    "ctaLabel": "Open WiamTrade",
     "copyright": "© 2026 WiamTrade. Powered by WiamLabs",
     "pitch": "WiamTrade is a non-custodial trading experience inside Telegram. Practice with $1M virtual on live charts, or connect your broker when you are ready for live trading.",
     "features": [
