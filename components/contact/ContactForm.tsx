@@ -98,8 +98,8 @@ export function ContactForm() {
       </form>
 
       <p className={styles.supportNote}>
-        For WiamApp or WiamTrade product help, email{" "}
-        <a href="mailto:support@wiamapp.com">support@wiamapp.com</a>.
+        WiamApp or WiamTrade support:{" "}
+        <a href="mailto:support@wiamapp.com">support@wiamapp.com</a>
       </p>
     </div>
   );

@@ -21,9 +21,11 @@ Copy `.env.example` to `.env.local`:
 
 | Variable | Example |
 |----------|---------|
-| `RESEND_API_KEY` | `re_...` |
-| `CONTACT_TO_EMAIL` | `founder@wiamapp.com` (inbox you read) |
-| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` (must be verified in Resend) |
+| `RESEND_API_KEY` | Same Resend key as WiamApp (`re_...`) |
+| `CONTACT_TO_EMAIL` | `founder@wiamapp.com` |
+| `CONTACT_FROM_EMAIL` | `hello@wiamapp.com` (Resend free = 1 domain only) |
+
+**Resend note:** Free plan allows **one domain** (`wiamapp.com`). The form sends as **WiamLabs &lt;hello@wiamapp.com&gt;** — no $20 upgrade needed.
 | `NEXT_PUBLIC_SITE_URL` | `https://wiamlabs.com` |
 | `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
 | `NEXT_PUBLIC_WIAMTRADE_URL` | `https://wiamtrade.wiamlabs.com` |

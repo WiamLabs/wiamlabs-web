@@ -71,8 +71,9 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Resend free plan = 1 domain. Use verified wiamapp.com to send; brand as WiamLabs.
   const to = process.env.CONTACT_TO_EMAIL || "founder@wiamapp.com";
-  const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamlabs.com";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamapp.com";
   const from =
     process.env.CONTACT_FROM_ADDRESS || `WiamLabs <${fromEmail}>`;
   const apiKey = process.env.RESEND_API_KEY;
@@ -81,7 +82,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         error:
-          "Contact form is not configured yet. Please email hello@wiamlabs.com directly.",
+          "Contact form is not configured yet. Please email founder@wiamapp.com directly.",
       },
       { status: 503 }
     );
@@ -121,13 +122,13 @@ export async function POST(req: NextRequest) {
 
       if (/not verified|verify your domain/i.test(msg)) {
         userMessage =
-          "Sender domain not verified in Resend yet. Finish wiamlabs.com DNS in Resend, then redeploy.";
+          "Sender not verified in Resend. Use an @wiamapp.com address (Resend free plan allows one domain).";
       } else if (/only send testing emails/i.test(msg)) {
         userMessage =
-          "Resend is in test mode. Verify wiamlabs.com in Resend Domains first.";
+          "Resend test mode. Use your verified wiamapp.com domain and redeploy.";
       } else if (/invalid from/i.test(msg)) {
         userMessage =
-          "Invalid sender address. Set CONTACT_FROM_EMAIL to an address on your verified Resend domain.";
+          "Invalid sender. Set CONTACT_FROM_EMAIL to hello@wiamapp.com (verified domain).";
       } else if (msg) {
         userMessage = msg;
       }

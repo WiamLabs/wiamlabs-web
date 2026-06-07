@@ -25,15 +25,18 @@ export default function ContactPage() {
           <h2>Email</h2>
           <ul>
             <li>
-              General: <a href="mailto:hello@wiamlabs.com">hello@wiamlabs.com</a>
+              General: <a href="mailto:hello@wiamapp.com">hello@wiamapp.com</a>
             </li>
             <li>
-              Press: <a href="mailto:press@wiamlabs.com">press@wiamlabs.com</a>
+              Founder: <a href="mailto:founder@wiamapp.com">founder@wiamapp.com</a>
             </li>
             <li>
               Product support: <a href="mailto:support@wiamapp.com">support@wiamapp.com</a>
             </li>
           </ul>
+          <p style={{ marginTop: "1rem", fontSize: "0.9rem", color: "var(--color-text-muted)" }}>
+            Form messages are delivered to our team inbox. Replies go to the email you enter.
+          </p>
         </section>
 
         <div className={styles.formWrap}>
