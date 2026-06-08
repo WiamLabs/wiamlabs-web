@@ -22,8 +22,8 @@ Copy `.env.example` to `.env.local`:
 | Variable | Example |
 |----------|---------|
 | `BREVO_API_KEY` | From [Brevo](https://app.brevo.com) → SMTP & API → API keys |
-| `CONTACT_TO_EMAIL` | `hello@wiamlabs.com` |
-| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` |
+| `CONTACT_TO_EMAIL` | `martin@wiamlabs.com` (inbox you read) |
+| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` (public sender) |
 | `CONTACT_FROM_NAME` | `WiamLabs` |
 
 ### WiamLabs email (Brevo — free, own domain)

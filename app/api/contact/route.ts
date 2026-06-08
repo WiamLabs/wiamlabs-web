@@ -72,7 +72,8 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || "hello@wiamlabs.com";
+  // FROM = public sender visitors see. TO = inbox Martin actually reads (can differ).
+  const to = process.env.CONTACT_TO_EMAIL || "martin@wiamlabs.com";
   const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamlabs.com";
   const fromName = process.env.CONTACT_FROM_NAME || "WiamLabs";
 

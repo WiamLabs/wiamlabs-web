@@ -1,0 +1,29 @@
+{
+  "photos": [
+    {
+      "id": "ghana-tech",
+      "title": "Building from Ghana",
+      "alt": "Abstract representation of Ghana technology and innovation",
+      "gradient": "gold"
+    },
+    {
+      "id": "wiamapp-workers",
+      "title": "WiamApp marketplace",
+      "alt": "WiamApp connects customers with verified workers",
+      "gradient": "emerald"
+    },
+    {
+      "id": "wiamtrade-charts",
+      "title": "WiamTrade live charts",
+      "alt": "WiamTrade practice trading on live market charts",
+      "gradient": "blue"
+    },
+    {
+      "id": "africa-digital",
+      "title": "Africa digital future",
+      "alt": "WiamLabs vision for Africa's digital economy",
+      "gradient": "purple"
+    }
+  ],
+  "videos": []
+}

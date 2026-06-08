@@ -3,15 +3,21 @@
 import { CTABand } from "@/components/home/CTABand";
 import { Hero } from "@/components/home/Hero";
 import { NewsTeaser } from "@/components/home/NewsTeaser";
+import { PartnerRow } from "@/components/home/PartnerRow";
 import { PillarGrid } from "@/components/home/PillarGrid";
 import { ProductStrip } from "@/components/home/ProductStrip";
+import { StatsBand } from "@/components/home/StatsBand";
+import { VideoFeature } from "@/components/home/VideoFeature";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <StatsBand />
       <ProductStrip />
+      <VideoFeature />
       <PillarGrid />
+      <PartnerRow />
       <NewsTeaser />
       <CTABand />
     </>

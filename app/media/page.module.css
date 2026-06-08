@@ -1,0 +1,79 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.page {
+  padding-bottom: 4rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tab,
+.tabActive {
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tab {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.tabActive {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border-color: transparent;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+}
+
+.photoVisual {
+  height: 180px;
+}
+
+.gold {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.35), rgba(8, 8, 26, 0.9));
+}
+.emerald {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(8, 8, 26, 0.9));
+}
+.blue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(8, 8, 26, 0.9));
+}
+.purple {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(8, 8, 26, 0.9));
+}
+
+.photoBody {
+  padding: 1rem 1.25rem;
+}
+
+.photoBody h3 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.empty {
+  padding: 3rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}

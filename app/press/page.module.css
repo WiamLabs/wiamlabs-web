@@ -1,0 +1,40 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.page {
+  padding-bottom: 4rem;
+  max-width: 800px;
+}
+
+.boilerplate {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.downloads {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(17, 27, 48, 0.5);
+}
+
+.item strong {
+  color: var(--color-white);
+}
+
+.item a {
+  color: var(--color-gold);
+  font-weight: 600;
+}

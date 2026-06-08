@@ -29,6 +29,18 @@ export function SiteFooter() {
                 <Link href="/news">News</Link>
               </li>
               <li>
+                <Link href="/media">Media</Link>
+              </li>
+              <li>
+                <Link href="/partners">Partners</Link>
+              </li>
+              <li>
+                <Link href="/press">Press</Link>
+              </li>
+              <li>
+                <Link href="/careers">Careers</Link>
+              </li>
+              <li>
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>

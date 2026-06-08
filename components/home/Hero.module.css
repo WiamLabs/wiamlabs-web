@@ -27,10 +27,60 @@
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 
-.content {
+.layout {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.content {
   max-width: 720px;
+}
+
+.visual {
+  display: grid;
+  gap: 1rem;
+}
+
+.preview {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: rgba(17, 27, 48, 0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-card);
+}
+
+.preview strong {
+  display: block;
+  color: var(--color-white);
+  margin-bottom: 0.35rem;
+}
+
+.preview span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.previewGold {
+  border-color: rgba(212, 160, 23, 0.35);
+}
+
+.previewBlue {
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    display: none;
+  }
 }
 
 .eyebrow {

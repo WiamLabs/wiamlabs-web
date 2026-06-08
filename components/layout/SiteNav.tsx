@@ -11,8 +11,10 @@ import styles from "./SiteNav.module.css";
 
 const NAV_ITEMS = [
   { href: "/products", label: "Products" },
+  { href: "/media", label: "Media" },
   { href: "/news", label: "News" },
   { href: "/about", label: "About" },
+  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
 

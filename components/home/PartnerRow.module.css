@@ -1,0 +1,83 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.section {
+  padding: 4rem 0;
+  border-block: 1px solid var(--color-border);
+  background: rgba(17, 27, 48, 0.35);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.header p {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  text-align: center;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+  border-color: rgba(212, 160, 23, 0.4);
+  transform: translateY(-3px);
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  background: linear-gradient(135deg, var(--color-gold), #8b6914);
+}
+
+.name {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1.05rem;
+}
+
+.desc {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.cta {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
