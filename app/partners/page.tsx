@@ -1,6 +1,5 @@
 // © 2026 WiamLabs. All rights reserved.
 
-import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { partners } from "@/lib/content";
