@@ -21,11 +21,22 @@ Copy `.env.example` to `.env.local`:
 
 | Variable | Example |
 |----------|---------|
-| `RESEND_API_KEY` | Same Resend key as WiamApp (`re_...`) |
-| `CONTACT_TO_EMAIL` | `founder@wiamapp.com` |
-| `CONTACT_FROM_EMAIL` | `hello@wiamapp.com` (Resend free = 1 domain only) |
+| `BREVO_API_KEY` | From [Brevo](https://app.brevo.com) → SMTP & API → API keys |
+| `CONTACT_TO_EMAIL` | `hello@wiamlabs.com` |
+| `CONTACT_FROM_EMAIL` | `hello@wiamlabs.com` |
+| `CONTACT_FROM_NAME` | `WiamLabs` |
 
-**Resend note:** Free plan allows **one domain** (`wiamapp.com`). The form sends as **WiamLabs &lt;hello@wiamapp.com&gt;** — no $20 upgrade needed.
+### WiamLabs email (Brevo — free, own domain)
+
+Resend free = 1 domain (already used by WiamApp). **WiamLabs uses Brevo** instead:
+
+1. Sign up at [brevo.com](https://www.brevo.com) (free, no card)
+2. **Senders & IPs → Domains** → add `wiamlabs.com`
+3. Add DNS records in **Cloudflare** (DKIM, etc.) until Brevo shows **Verified**
+4. **SMTP & API → API keys** → create key → paste as `BREVO_API_KEY` in Vercel
+5. **Cloudflare Email Routing** (free): forward `hello@wiamlabs.com` → your personal inbox so you receive messages
+
+Free limit: **300 emails/day** — more than enough for a company contact form.
 | `NEXT_PUBLIC_SITE_URL` | `https://wiamlabs.com` |
 | `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
 | `NEXT_PUBLIC_WIAMTRADE_URL` | `https://wiamtrade.wiamlabs.com` |

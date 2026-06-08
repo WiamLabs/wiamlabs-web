@@ -1,6 +1,7 @@
 // © 2026 WiamLabs. All rights reserved.
 
 import { NextRequest, NextResponse } from "next/server";
+import { sendContactEmail } from "@/lib/contactEmail";
 import { checkRateLimit } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
@@ -71,22 +72,9 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Resend free plan = 1 domain. Use verified wiamapp.com to send; brand as WiamLabs.
-  const to = process.env.CONTACT_TO_EMAIL || "founder@wiamapp.com";
-  const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamapp.com";
-  const from =
-    process.env.CONTACT_FROM_ADDRESS || `WiamLabs <${fromEmail}>`;
-  const apiKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey) {
-    return NextResponse.json(
-      {
-        error:
-          "Contact form is not configured yet. Please email founder@wiamapp.com directly.",
-      },
-      { status: 503 }
-    );
-  }
+  const to = process.env.CONTACT_TO_EMAIL || "hello@wiamlabs.com";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || "hello@wiamlabs.com";
+  const fromName = process.env.CONTACT_FROM_NAME || "WiamLabs";
 
   const html = `
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
@@ -98,45 +86,18 @@ export async function POST(req: NextRequest) {
     <p style="color:#666;font-size:12px;">© 2026 WiamLabs. All rights reserved.</p>
   `;
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: email,
-      subject: `[WiamLabs Contact] ${subject}`,
-      html,
-    }),
+  const result = await sendContactEmail({
+    to,
+    fromEmail,
+    fromName,
+    replyTo: email,
+    subject: `[WiamLabs Contact] ${subject}`,
+    html,
   });
 
-  if (!res.ok) {
-    let userMessage = "Failed to send email. Try again later.";
-    try {
-      const err = (await res.json()) as { message?: string };
-      const msg = err.message || "";
-      console.error("[contact] Resend error:", res.status, msg);
-
-      if (/not verified|verify your domain/i.test(msg)) {
-        userMessage =
-          "Sender not verified in Resend. Use an @wiamapp.com address (Resend free plan allows one domain).";
-      } else if (/only send testing emails/i.test(msg)) {
-        userMessage =
-          "Resend test mode. Use your verified wiamapp.com domain and redeploy.";
-      } else if (/invalid from/i.test(msg)) {
-        userMessage =
-          "Invalid sender. Set CONTACT_FROM_EMAIL to hello@wiamapp.com (verified domain).";
-      } else if (msg) {
-        userMessage = msg;
-      }
-    } catch {
-      console.error("[contact] Resend error:", res.status);
-    }
-
-    return NextResponse.json({ error: userMessage }, { status: 502 });
+  if (!result.ok) {
+    const status = result.error.includes("not configured") ? 503 : 502;
+    return NextResponse.json({ error: result.error }, { status });
   }
 
   return NextResponse.json({ ok: true });
