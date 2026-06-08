@@ -14,9 +14,7 @@ export function SiteFooter() {
             <Link href="/">
               <Image src="/brand/logo.svg" alt="WiamLabs" width={40} height={40} />
             </Link>
-            <p>
-              Building Africa&apos;s digital future — WiamApp, WiamTrade, and what comes next.
-            </p>
+            <p>WiamApp and WiamTrade — built in Ghana by WiamLabs.</p>
           </div>
 
           <div className={styles.col}>
@@ -30,9 +28,6 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/media">Media</Link>
-              </li>
-              <li>
-                <Link href="/partners">Partners</Link>
               </li>
               <li>
                 <Link href="/press">Press</Link>

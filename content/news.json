@@ -2,40 +2,40 @@
   {
     "slug": "introducing-wiamlabs",
     "title": "Introducing WiamLabs",
-    "excerpt": "WiamLabs is the technology house behind WiamApp and WiamTrade — built in Ghana for Africa.",
+    "excerpt": "The company behind WiamApp and WiamTrade — based in Ghana.",
     "date": "2026-06-01",
     "author": "WiamLabs",
     "tag": "Company",
     "body": [
-      "WiamLabs is a Ghana-based technology company founded by Martin. Our mission is to build digital products that solve real problems for African users — with trust, clarity, and world-class design.",
-      "Today we operate two live products: WiamApp, a services marketplace that connects customers with verified workers, and WiamTrade, a non-custodial trading platform inside Telegram.",
-      "This website is our home on the open web. Search for WiamLabs — we are here."
+      "WiamLabs is a technology company in Ghana. We ship WiamApp, a marketplace for booking verified workers, and WiamTrade, a Telegram mini app for practice and live trading.",
+      "This website is where we publish company news, product updates, and press information. The apps themselves live at wiamapp.com and on Telegram.",
+      "We will post here when there is something concrete to share."
     ]
   },
   {
     "slug": "wiamapp-marketplace-for-africa",
-    "title": "WiamApp: Marketplace for Africa",
-    "excerpt": "How WiamApp helps customers book verified workers in their city in real time.",
+    "title": "WiamApp: book workers in your city",
+    "excerpt": "Customers book electricians, plumbers, cleaners, and other verified professionals.",
     "date": "2026-06-03",
     "author": "WiamLabs",
     "tag": "WiamApp",
     "body": [
-      "Finding reliable skilled workers should not be a gamble. WiamApp brings verified professionals — electricians, plumbers, cleaners, and more — into one trusted marketplace.",
-      "Customers book in real time. Workers build formal reputation. Everyone wins when trust is built into the product from day one.",
-      "Visit wiamapp.com to get started."
+      "WiamApp lists verified workers by category and city. Customers book in the app; workers manage jobs and build a track record on the platform.",
+      "The product is live at wiamapp.com. Support questions go to support@wiamapp.com.",
+      "WiamApp is a WiamLabs product. © 2026 WiamApp. Powered by WiamLabs."
     ]
   },
   {
     "slug": "wiamtrade-practice-trading",
-    "title": "WiamTrade: Practice Trading on Live Markets",
-    "excerpt": "Practice crypto, forex, and African stocks with $1M virtual — then go live when you are ready.",
+    "title": "WiamTrade: practice, then go live",
+    "excerpt": "Practice on live charts with virtual capital. Connect your exchange when you choose.",
     "date": "2026-06-05",
     "author": "WiamLabs",
     "tag": "WiamTrade",
     "body": [
-      "WiamTrade lets you practice on live market charts with $1M virtual capital — no broker API keys required. Switch to live mode only when you choose to connect your exchange.",
-      "We never hold your funds. Your keys, your trades, your control.",
-      "Open @WiamTradeBot on Telegram to begin."
+      "WiamTrade runs inside Telegram. Practice mode uses live market data with virtual capital — no broker keys required.",
+      "Live mode connects to your exchange. WiamLabs does not hold your funds.",
+      "Open @WiamTradeBot on Telegram to start."
     ]
   }
 ]

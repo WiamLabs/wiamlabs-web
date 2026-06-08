@@ -4,19 +4,16 @@ import styles from "./PillarGrid.module.css";
 
 const PILLARS = [
   {
-    icon: "🌍",
-    title: "Africa-first",
-    text: "We design for real African users — mobile networks, local payments, and city-scale trust.",
+    title: "Built for African users",
+    text: "Mobile-first flows, local payments, and products that work on real networks — not demo-day slides.",
   },
   {
-    icon: "🔐",
-    title: "Trust & non-custodial",
-    text: "Where trading is involved, your keys stay yours. WiamLabs builds tools, not custodians.",
+    title: "Non-custodial trading",
+    text: "WiamTrade connects to your exchange. We do not hold your funds or your API keys on our servers.",
   },
   {
-    icon: "🇬🇭",
-    title: "Built in Ghana",
-    text: "Founded by Martin in Ghana — engineering discipline with continental ambition.",
+    title: "Based in Ghana",
+    text: "WiamLabs is headquartered in Ghana. WiamApp and WiamTrade are the first products from the house.",
   },
 ];
 
@@ -24,13 +21,10 @@ export function PillarGrid() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <h2>What we stand for</h2>
+        <h2>How we build</h2>
         <div className={styles.grid}>
           {PILLARS.map((pillar) => (
             <article key={pillar.title} className={styles.item}>
-              <div className={styles.icon} aria-hidden>
-                {pillar.icon}
-              </div>
               <h3>{pillar.title}</h3>
               <p>{pillar.text}</p>
             </article>

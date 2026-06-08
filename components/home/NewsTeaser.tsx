@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { newsPosts } from "@/lib/products";
+import { loadNewsPosts } from "@/lib/products";
 import styles from "./NewsTeaser.module.css";
 
-export function NewsTeaser() {
-  const latest = [...newsPosts]
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 3);
+export async function NewsTeaser() {
+  const posts = await loadNewsPosts();
+  const latest = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 
   return (
     <section className={styles.section}>

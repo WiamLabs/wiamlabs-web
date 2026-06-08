@@ -8,13 +8,13 @@ export function CTABand() {
     <section className={styles.band}>
       <div className={`container ${styles.inner}`}>
         <div>
-          <h2>Work with WiamLabs</h2>
-          <p>Partnerships, press, and careers — we would love to hear from you.</p>
+          <h2>Get in touch</h2>
+          <p>Press, careers, or a general question — send a message and we will reply.</p>
         </div>
         <div className={styles.actions}>
           <Button href="/contact">Contact us</Button>
           <Button href="/about" variant="outline">
-            About Martin
+            About WiamLabs
           </Button>
         </div>
       </div>

@@ -1,10 +1,10 @@
 // © 2026 WiamLabs. All rights reserved.
 
 import type { Metadata } from "next";
-import { COPYRIGHT, FOUNDER_NAME, SITE_NAME, SITE_URL } from "./site";
+import { COPYRIGHT, SITE_NAME, SITE_URL } from "./site";
 
 const defaultDescription =
-  "WiamLabs builds WiamApp and WiamTrade and future African digital products. Founded by Martin. Ghana.";
+  "WiamLabs builds WiamApp and WiamTrade from Ghana — marketplace and trading products for Africa.";
 
 type PageMeta = {
   title?: string;
@@ -19,7 +19,7 @@ export function buildMetadata({
   path = "",
   image = "/opengraph-image",
 }: PageMeta = {}): Metadata {
-  const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Building Africa's Digital Products`;
+  const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — WiamApp & WiamTrade`;
   const url = `${SITE_URL}${path}`;
   const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
@@ -43,15 +43,8 @@ export function buildMetadata({
       description,
       images: [imageUrl],
     },
-    keywords: [
-      SITE_NAME,
-      "WiamApp",
-      "WiamTrade",
-      "Africa technology",
-      "Ghana startup",
-      FOUNDER_NAME,
-    ],
-    authors: [{ name: FOUNDER_NAME }],
+    keywords: [SITE_NAME, "WiamApp", "WiamTrade", "Ghana technology", "Africa software"],
+    authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
     icons: {

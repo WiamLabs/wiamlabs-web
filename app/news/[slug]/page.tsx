@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { getNewsPost, newsPosts } from "@/lib/products";
+import { loadNewsPost, newsPosts } from "@/lib/products";
 import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const post = getNewsPost(slug);
+  const post = await loadNewsPost(slug);
   if (!post) return {};
   return buildMetadata({
     title: post.title,
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function NewsArticlePage({ params }: Props) {
   const { slug } = await params;
-  const post = getNewsPost(slug);
+  const post = await loadNewsPost(slug);
   if (!post) notFound();
 
   return (

@@ -21,7 +21,7 @@ export default function ProductsPage() {
       <PageHeader
         eyebrow="Portfolio"
         title="WiamLabs products"
-        subtitle="Live products today. The grid expands as new products ship from the WiamLabs house."
+        subtitle="WiamApp and WiamTrade are live today. More products will be listed here when they ship."
       />
 
       <div className={styles.grid}>
@@ -51,7 +51,7 @@ export default function ProductsPage() {
       <p style={{ marginTop: "2rem", color: "var(--color-text-muted)" }}>
         Future products will appear here with a &quot;Coming soon&quot; badge.{" "}
         <Link href="/contact" style={{ color: "var(--color-gold)" }}>
-          Partner with us
+          Contact us
         </Link>
         .
       </p>

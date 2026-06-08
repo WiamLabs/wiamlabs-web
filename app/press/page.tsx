@@ -2,7 +2,7 @@
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { buildMetadata } from "@/lib/seo";
-import { COPYRIGHT, FOUNDER_NAME } from "@/lib/site";
+import { COPYRIGHT } from "@/lib/site";
 import styles from "./page.module.css";
 
 export const metadata = buildMetadata({
@@ -17,14 +17,13 @@ export default function PressPage() {
       <PageHeader
         eyebrow="Press"
         title="Press kit"
-        subtitle="Resources for journalists and partners covering WiamLabs."
+        subtitle="Boilerplate, logos, and contact for press inquiries."
       />
 
       <section className={styles.boilerplate}>
         <p>
-          WiamLabs is a Ghana-based technology company founded by {FOUNDER_NAME}. We build digital
-          products for Africa including WiamApp, a services marketplace, and WiamTrade, a
-          non-custodial trading platform. {COPYRIGHT}
+          WiamLabs is a Ghana-based technology company. We build WiamApp, a services marketplace,
+          and WiamTrade, a non-custodial trading platform on Telegram. {COPYRIGHT}
         </p>
       </section>
 

@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export const metadata = buildMetadata({
   title: "Contact",
-  description: "Contact WiamLabs for partnerships, press, and general inquiries.",
+  description: "Contact WiamLabs for press, careers, and general inquiries.",
   path: "/contact",
 });
 
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Get in touch"
         title="Contact WiamLabs"
-        subtitle="Partnerships, press, careers, and general questions — we read every message."
+        subtitle="Press, careers, or a general question — we read every message."
       />
 
       <div className={styles.grid}>

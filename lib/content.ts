@@ -2,14 +2,6 @@
 
 import careersData from "@/content/careers.json";
 import mediaData from "@/content/media.json";
-import partnersData from "@/content/partners.json";
-
-export type Partner = {
-  name: string;
-  description: string;
-  website: string;
-  logoAlt: string;
-};
 
 export type MediaPhoto = {
   id: string;
@@ -33,7 +25,6 @@ export type Career = {
   summary: string;
 };
 
-export const partners = partnersData as Partner[];
 export const mediaPhotos = mediaData.photos as MediaPhoto[];
 export const mediaVideos = mediaData.videos as MediaVideo[];
 export const careers = careersData as Career[];

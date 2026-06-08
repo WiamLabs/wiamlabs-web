@@ -9,10 +9,10 @@ export function VideoFeature() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.copy}>
-            <h2>Built in Ghana, for the continent</h2>
+            <h2>See what we are building</h2>
             <p>
-              WiamLabs is the house behind WiamApp and WiamTrade — products Africans can trust.
-              Founder message video coming soon on our media page.
+              Product screenshots and a short company video will go here. For now, read the latest on
+              our news page or open WiamApp and WiamTrade directly.
             </p>
             <Link href="/media" style={{ color: "var(--color-gold)", fontWeight: 600 }}>
               View media gallery →
@@ -22,7 +22,7 @@ export function VideoFeature() {
             <div className={styles.play} aria-hidden>
               ▶
             </div>
-            <span className={styles.label}>Founder video — coming soon</span>
+            <span className={styles.label}>Company video — coming soon</span>
           </div>
         </div>
       </div>

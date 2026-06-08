@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 
 export const metadata = buildMetadata({
   title: "Careers",
-  description: "Join WiamLabs — build WiamApp, WiamTrade, and Africa's digital future.",
+  description: "Open roles at WiamLabs — engineering and product work on WiamApp and WiamTrade.",
   path: "/careers",
 });
 

@@ -65,7 +65,8 @@ export function ContactForm() {
           <select id="subject" name="subject" required defaultValue="General">
             <option value="General">General</option>
             <option value="Press">Press</option>
-            <option value="Partnership">Partnership</option>
+            <option value="Careers">Careers</option>
+            <option value="Business">Business inquiry</option>
             <option value="Support">Product support</option>
           </select>
         </div>

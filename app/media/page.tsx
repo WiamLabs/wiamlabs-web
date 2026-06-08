@@ -17,7 +17,7 @@ export default function MediaPage() {
       <PageHeader
         eyebrow="Gallery"
         title="WiamLabs media"
-        subtitle="Photos and founder video — more assets added as we grow."
+        subtitle="Product shots and company media — updated as we publish new material."
       />
 
       <section>
@@ -42,7 +42,7 @@ export default function MediaPage() {
         <h2 style={{ color: "var(--color-white)", marginBottom: "1rem" }}>Videos</h2>
         {mediaVideos.length === 0 ? (
           <p className={styles.empty}>
-            Founder message video coming soon. Check back or follow us on YouTube.
+            Company video coming soon. Check back or follow us on YouTube.
           </p>
         ) : (
           <p className={styles.empty}>Videos will appear here.</p>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card } from "@/components/ui/Card";
-import { newsPosts } from "@/lib/products";
+import { loadNewsPosts } from "@/lib/products";
 import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
@@ -13,8 +13,9 @@ export const metadata = buildMetadata({
   path: "/news",
 });
 
-export default function NewsPage() {
-  const sorted = [...newsPosts].sort((a, b) => b.date.localeCompare(a.date));
+export default async function NewsPage() {
+  const posts = await loadNewsPosts();
+  const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <div className={`container ${styles.page}`}>

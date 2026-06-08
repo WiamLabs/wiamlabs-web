@@ -4,9 +4,9 @@ import styles from "./StatsBand.module.css";
 
 const STATS = [
   { value: "2", label: "Live products" },
-  { value: "Ghana", label: "Founded" },
-  { value: "Africa", label: "First market" },
-  { value: "2026", label: "WiamLabs launch" },
+  { value: "Ghana", label: "Headquarters" },
+  { value: "WiamApp", label: "Marketplace" },
+  { value: "WiamTrade", label: "Trading" },
 ];
 
 export function StatsBand() {

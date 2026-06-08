@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_NAME,
     short_name: SITE_NAME,
-    description: "Building Africa's digital future — WiamApp, WiamTrade, and more.",
+    description: "WiamApp and WiamTrade — products from WiamLabs, Ghana.",
     start_url: "/",
     display: "standalone",
     background_color: "#08081A",

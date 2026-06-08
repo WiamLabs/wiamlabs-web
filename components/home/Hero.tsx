@@ -11,14 +11,13 @@ export function Hero() {
       <div className="container">
         <div className={`${styles.layout} fade-in`}>
           <div className={styles.content}>
-            <p className={styles.eyebrow}>Founded by Martin · Ghana</p>
+            <p className={styles.eyebrow}>Ghana · Technology company</p>
             <h1 className={styles.title}>
-              <span className={styles.brand}>WiamLabs</span> — Building Africa&apos;s digital
-              future.
+              <span className={styles.brand}>WiamLabs</span> builds products for Africa.
             </h1>
             <p className={styles.subtitle}>
-              We build WiamApp and WiamTrade — trusted products for African users, designed with
-              world-class craft.
+              WiamApp connects customers with verified workers. WiamTrade lets you practice on live
+              markets, then trade with your own keys when you are ready.
             </p>
             <div className={styles.actions}>
               <Button href="/products" size="lg">

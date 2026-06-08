@@ -4,7 +4,7 @@
 
 Public company site for **wiamlabs.com** — built from `WIAMLABS_WEBSITE_MASTER_PLAN.md`.
 
-**Hosting:** [Vercel Hobby](https://vercel.com/docs/plans/hobby) (free).
+**Hosting:** [Render](https://render.com) (Blueprint in `render.yaml`) or [Vercel Hobby](https://vercel.com/docs/plans/hobby).
 
 ## Development
 
@@ -41,17 +41,22 @@ Free limit: **300 emails/day** — more than enough for a company contact form.
 | `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
 | `NEXT_PUBLIC_WIAMTRADE_URL` | `https://wiamtrade.wiamlabs.com` |
 
-## Deploy on Vercel (free)
+## Deploy on Render (recommended — Blueprint)
 
-1. Go to [vercel.com](https://vercel.com) → sign in with GitHub.
-2. **Add New Project** → import `WiamLabs/wiamlabs-web`.
-3. Framework: Next.js (auto-detected). Click **Deploy**.
-4. **Settings → Environment Variables** — add vars from table above.
-5. **Settings → Domains** → add `wiamlabs.com` and `www.wiamlabs.com`.
-6. In **Cloudflare DNS** (where you bought the domain), add the records Vercel shows:
-   - Usually `A` record → `76.76.21.21` and `CNAME` `www` → `cname.vercel-dns.com`
+1. Push `main` to `WiamLabs/wiamlabs-web` (includes `render.yaml`).
+2. [render.com](https://render.com) → **New** → **Blueprint**.
+3. Connect **WiamLabs/wiamlabs-web** → **Apply**.
+4. When prompted, paste `BREVO_API_KEY` (and `NEXT_PUBLIC_CMS_API_URL` later for Phase 3).
+5. After deploy: **Settings → Custom Domains** → add `wiamlabs.com`.
+6. In **Cloudflare DNS**: CNAME `wiamlabs.com` → your `*.onrender.com` host (or use Render’s A record).
 
-SSL is automatic on both Vercel and Cloudflare.
+Health check: `GET /api/health`
+
+## Deploy on Vercel (alternative)
+
+1. [vercel.com](https://vercel.com) → import `WiamLabs/wiamlabs-web`.
+2. Add env vars from the table above → **Deploy**.
+3. **Domains** → `wiamlabs.com` → follow Vercel DNS instructions in Cloudflare.
 
 ## Phase 1 launch checklist (Martin)
 

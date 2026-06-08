@@ -3,7 +3,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "WiamLabs — Building Africa's Digital Products";
+export const alt = "WiamLabs — WiamApp & WiamTrade";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -25,10 +25,10 @@ export default function OpenGraphImage() {
       >
         <div style={{ fontSize: 28, color: "#D4A017", marginBottom: 16 }}>WiamLabs</div>
         <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.1, maxWidth: 900 }}>
-          Building Africa&apos;s digital future.
+          WiamApp and WiamTrade
         </div>
         <div style={{ fontSize: 28, color: "#7B8AA5", marginTop: 24 }}>
-          WiamApp · WiamTrade · Founded by Martin
+          Technology company · Ghana
         </div>
       </div>
     ),
