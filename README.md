@@ -4,7 +4,7 @@
 
 Public company site for **wiamlabs.com** — built from `WIAMLABS_WEBSITE_MASTER_PLAN.md`.
 
-**Hosting:** [Render](https://render.com) (Blueprint in `render.yaml`) or [Vercel Hobby](https://vercel.com/docs/plans/hobby).
+**Hosting:** [Vercel Hobby](https://vercel.com/docs/plans/hobby) — see **Where everything lives** below.
 
 ## Development
 
@@ -41,22 +41,23 @@ Free limit: **300 emails/day** — more than enough for a company contact form.
 | `NEXT_PUBLIC_WIAMAPP_URL` | `https://wiamapp.com` |
 | `NEXT_PUBLIC_WIAMTRADE_URL` | `https://wiamtrade.wiamlabs.com` |
 
-## Deploy on Render (recommended — Blueprint)
+## Where everything lives (one map)
 
-1. Push `main` to `WiamLabs/wiamlabs-web` (includes `render.yaml`).
-2. [render.com](https://render.com) → **New** → **Blueprint**.
-3. Connect **WiamLabs/wiamlabs-web** → **Apply**.
-4. When prompted, paste `BREVO_API_KEY` (and `NEXT_PUBLIC_CMS_API_URL` later for Phase 3).
-5. After deploy: **Settings → Custom Domains** → add `wiamlabs.com`.
-6. In **Cloudflare DNS**: CNAME `wiamlabs.com` → your `*.onrender.com` host (or use Render’s A record).
+| URL | What it is | Where to host |
+|-----|------------|---------------|
+| **wiamlabs.com** | This repo — company website | **Vercel** |
+| **studio.wiamlabs.com** | CMS dashboard (Phase 3) | **Vercel** (repo `wiamlabs-studio`) |
+| **api.wiamlabs.com** | CMS backend API (Phase 3) | **Render** (repo `wiamlabs-api`) |
+| **wiamtrade.…** | WiamTrade app | **Render** (already set up) |
+| **wiamapp.com** | WiamApp product | Separate (not this repo) |
 
-Health check: `GET /api/health`
+**Rule of thumb:** Next.js → Vercel. Python API → Render.
 
-## Deploy on Vercel (alternative)
+## Deploy this site (Vercel)
 
 1. [vercel.com](https://vercel.com) → import `WiamLabs/wiamlabs-web`.
 2. Add env vars from the table above → **Deploy**.
-3. **Domains** → `wiamlabs.com` → follow Vercel DNS instructions in Cloudflare.
+3. **Domains** → add `wiamlabs.com` → follow Vercel DNS steps in Cloudflare.
 
 ## Phase 1 launch checklist (Martin)
 
