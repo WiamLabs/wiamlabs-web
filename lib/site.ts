@@ -8,6 +8,8 @@ export const WIAMAPP_URL =
   process.env.NEXT_PUBLIC_WIAMAPP_URL || "https://wiamapp.com";
 export const WIAMTRADE_URL =
   process.env.NEXT_PUBLIC_WIAMTRADE_URL || "https://wiamtrade.wiamlabs.com";
+export const WIAMPASS_URL =
+  process.env.NEXT_PUBLIC_WIAMPASS_URL || "https://wiampass.com";
 export const FOUNDER_NAME = "Martin";
 export const COPYRIGHT = "© 2026 WiamLabs. All rights reserved.";
 

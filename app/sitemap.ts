@@ -19,7 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/cookies",
   ];
 
-  const productRoutes = products.map((p) => `/products/${p.slug}`);
+  const productRoutes = products.flatMap((p) => {
+    const routes = [`/products/${p.slug}`, `/${p.slug}/pricing`];
+    if (p.businessPricingPlans?.length) {
+      routes.push(`/${p.slug}/business/pricing`);
+    }
+    return routes;
+  });
   const newsRoutes = newsPosts.map((n) => `/news/${n.slug}`);
 
   const all = [...staticRoutes, ...productRoutes, ...newsRoutes];

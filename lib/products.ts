@@ -3,7 +3,26 @@
 import productsData from "@/content/products.json";
 import newsData from "@/content/news.json";
 import { fetchCmsNews, fetchCmsNewsBySlug, fetchCmsProducts } from "./cms";
-import { WIAMAPP_URL, WIAMTRADE_URL } from "./site";
+import { WIAMAPP_URL, WIAMTRADE_URL, WIAMPASS_URL } from "./site";
+
+export type PricingPlan = {
+  name: string;
+  price: string;       // display string, e.g. "GHS 30/mo" or "Free"
+  billingNote?: string; // e.g. "billed monthly", "per ticket sold"
+  description: string;
+  features: string[];
+  ctaLabel: string;
+  highlighted?: boolean;
+  // Present only on plans that actually charge money through the
+  // central wiamlabs.com checkout. Must match the plan_key the
+  // product's own backend recognizes (WiamApp: subscription_config
+  // table). Omit entirely for Free/Contact-sales plans — those keep
+  // linking straight to ctaHref or externalUrl instead.
+  checkoutPlanKey?: string;
+  // Where non-checkout CTAs go (register, apply, etc.). Falls back
+  // to the product's externalUrl when omitted.
+  ctaHref?: string;
+};
 
 export type Product = {
   slug: string;
@@ -16,6 +35,10 @@ export type Product = {
   pitch: string;
   features: string[];
   accent?: string;
+  pricingIntro?: string;
+  pricingPlans?: PricingPlan[];
+  businessPricingIntro?: string;
+  businessPricingPlans?: PricingPlan[];
 };
 
 export type NewsPost = {
@@ -39,6 +62,13 @@ function withLiveUrls(product: Product): Product {
       ...product,
       externalUrl: WIAMTRADE_URL,
       ctaLabel: "Open WiamTrade",
+    };
+  }
+  if (product.slug === "wiampass") {
+    return {
+      ...product,
+      externalUrl: WIAMPASS_URL,
+      ctaLabel: "Open WiamPass",
     };
   }
   return product;

@@ -1,0 +1,125 @@
+/* © 2026 WiamLabs. All rights reserved. */
+
+.page {
+  padding-bottom: 4rem;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+}
+
+.highlighted {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 1px var(--color-gold);
+}
+
+.badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.75rem;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.planName {
+  color: var(--color-white);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.planPrice {
+  color: var(--color-gold);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.billingNote {
+  color: #f59e0b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.planDescription {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 0;
+}
+
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  flex-grow: 1;
+}
+
+.planFeatures li {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.planFeatures li:first-child {
+  border-top: none;
+}
+
+.backLink {
+  margin-top: 3rem;
+}
+
+.backLink a {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.checkoutBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.checkoutInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-white);
+  font-size: 0.9rem;
+}
+
+.checkoutError {
+  color: #f87171;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.checkoutHint {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.25rem 0 0 0;
+}
+
+.checkoutHint a {
+  color: var(--color-gold);
+}

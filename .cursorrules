@@ -1,0 +1,58 @@
+# Cursor / AI assistant rules — wiamlabs-web
+
+This repo is **wiamlabs.com** only — the public WiamLabs company site
+(about, products, news, careers, press, and now per-product pricing).
+It is not any individual product's own site — WiamApp's marketing site,
+WiamPass's web app, and WiamTrade each live in their own separate repo.
+
+## Stack (this repo only)
+- **Next.js 15** App Router, TypeScript
+- Hosting: **Vercel** (not Render — this repo deploys differently
+  from WiamApp/WiamPass, which are Render services)
+- Content: static JSON in `content/` (`products.json`, `news.json`) as
+  a fallback, with an optional CMS layer (`lib/cms.ts`) that pulls from
+  `wiamlabs-studio`'s API when configured
+- Email: **Brevo**, not Resend — Resend's free tier is already used by
+  WiamApp on the same domain-verification limit, so this repo uses a
+  separate provider on purpose
+
+## URL structure — read this before adding routes
+Each product gets a **top-level** route, not nested under `/products/`:
+```
+wiamlabs.com/wiamapp/pricing
+wiamlabs.com/wiampass/pricing
+wiamlabs.com/wiamtrade/pricing
+```
+implemented as the single dynamic route `app/[product]/pricing/page.tsx`,
+driven by `lib/products.ts` + `content/products.json`. Do not create
+per-product static folders (`app/wiamapp/`, `app/wiampass/`) — add the
+product to `products.json` instead, the dynamic route already covers it.
+
+The existing `app/products/[slug]/page.tsx` (product overview/pitch
+page) is separate and stays where it is — pricing and overview are two
+different routes by design, not duplicates.
+
+Static top-level routes (`about`, `careers`, `contact`, `news`, `media`,
+`press`, `products`, `legal`) take priority over the `[product]`
+dynamic segment at build time — never rename a product to match one of
+these words.
+
+## Shared Paystack webhook router
+`app/api/webhook/paystack/route.ts` is the ONE webhook URL the shared
+WiamLabs Paystack account is limited to. It verifies the signature,
+reads `metadata.app` from the event, and forwards to that product's
+real backend (`WIAMAPP_WEBHOOK_URL`, `WIAMPASS_WEBHOOK_URL`, etc. —
+server-side env vars, never `NEXT_PUBLIC_`). Untagged events (all of
+WiamPass's transactions predate this convention) fall back to
+WiamPass on purpose — never remove that fallback without confirming
+WiamPass tags its own transactions first. This route replaces the
+standalone `wiamlabs-payments-router` service — that repo is
+deprecated, do not deploy it, everything lives here now.
+
+## Hard rules
+- Pricing numbers in `content/products.json` marked
+  `"billingNote": "PLACEHOLDER — ..."` are NOT real prices. Never
+  remove that field or treat the accompanying price as final without
+  being told the real number.
+- Don't add authentication or a dashboard here — that's
+  `wiamlabs-studio`'s job, a separate repo.

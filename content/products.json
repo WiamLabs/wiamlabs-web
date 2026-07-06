@@ -14,7 +14,145 @@
       "Customer and worker apps (iOS, Android)",
       "Spotlight, trust scores, and safety systems"
     ],
-    "accent": "gold"
+    "accent": "gold",
+    "pricingIntro": "Free for customers. Workers keep booking for free — paid plans are optional, for workers who want more visibility.",
+    "pricingPlans": [
+      {
+        "name": "Customer",
+        "price": "Free",
+        "description": "Book verified workers, chat, and pay securely. No fees to browse or book.",
+        "features": [
+          "Browse verified worker profiles",
+          "Secure escrow payments",
+          "In-app chat and booking history",
+          "Dispute protection on every booking"
+        ],
+        "ctaLabel": "Get the app",
+        "ctaHref": "https://wiamapp.com/register"
+      },
+      {
+        "name": "Worker — Standard",
+        "price": "Free",
+        "description": "List your services, get booked, get paid. No subscription required to start earning.",
+        "features": [
+          "Verified badge after ID check",
+          "Accept bookings and get paid via escrow",
+          "Basic profile with portfolio photos",
+          "Standard placement in search"
+        ],
+        "ctaLabel": "Register as a worker",
+        "ctaHref": "https://wiamapp.com/register?role=worker"
+      },
+      {
+        "name": "Worker — Pro",
+        "price": "$6 /mo",
+        "billingNote": "Charged in GHS at checkout — matches subscription_config price_usd_web",
+        "description": "Priority placement and extra tools for workers who want more bookings.",
+        "features": [
+          "Priority placement in search results",
+          "Spotlight eligibility",
+          "Advanced booking analytics",
+          "Priority support"
+        ],
+        "ctaLabel": "Upgrade to Pro",
+        "highlighted": true,
+        "checkoutPlanKey": "pro"
+      }
+    ],
+    "businessPricingIntro": "For hotels, hospitals, and offices booking workers at scale — team management, billing, and contracts from one dashboard.",
+    "businessPricingPlans": [
+      {
+        "name": "Starter",
+        "price": "$20 /mo",
+        "billingNote": "Charged in GHS at checkout — up to 5 team members",
+        "description": "Everything a small team needs to book trusted workers and manage them in one place.",
+        "features": [
+          "Unlimited bookings",
+          "Team management",
+          "Spotlight posts",
+          "Basic analytics"
+        ],
+        "ctaLabel": "Get Starter",
+        "checkoutPlanKey": "starter_biz"
+      },
+      {
+        "name": "Growth",
+        "price": "$40 /mo",
+        "billingNote": "Charged in GHS at checkout — up to 25 team members",
+        "description": "For growing companies that assign jobs, run contracts, and need deeper reporting.",
+        "features": [
+          "Everything in Starter",
+          "Job assignment to team",
+          "Recurring contracts",
+          "Advanced analytics",
+          "2 admin logins with roles",
+          "Dedicated account manager"
+        ],
+        "ctaLabel": "Get Growth",
+        "highlighted": true,
+        "checkoutPlanKey": "growth_biz"
+      },
+      {
+        "name": "Enterprise",
+        "price": "$95 /mo",
+        "billingNote": "Unlimited team members — sold with onboarding support",
+        "description": "Multi-location management, invoicing, SLA tools, and API access for large organizations.",
+        "features": [
+          "Everything in Growth",
+          "Multi-location management",
+          "Consolidated monthly invoicing",
+          "SLA guarantee dashboard",
+          "Verified vendor database",
+          "API access"
+        ],
+        "ctaLabel": "Apply for Enterprise",
+        "ctaHref": "https://wiamapp.com/business/apply"
+      }
+    ]
+  },
+  {
+    "slug": "wiampass",
+    "name": "WiamPass",
+    "tagline": "Ghana's smartest event ticketing platform.",
+    "status": "live",
+    "externalUrl": "https://wiampass.com",
+    "ctaLabel": "Open WiamPass",
+    "copyright": "© 2026 WiamPass. Powered by WiamLabs",
+    "pitch": "WiamPass makes selling and scanning event tickets simple — pay by card or Mobile Money, get a QR ticket instantly, and let organizers scan attendees in seconds.",
+    "features": [
+      "Card and Mobile Money checkout via Paystack",
+      "Instant QR ticket delivery",
+      "@WiamPassBot and @WiamScanBot on Telegram",
+      "Organizer dashboard for events and check-in"
+    ],
+    "accent": "navy",
+    "pricingIntro": "Free to create an event. WiamPass takes a small platform fee only on tickets actually sold.",
+    "pricingPlans": [
+      {
+        "name": "Organizer — Standard",
+        "price": "__% per ticket sold",
+        "billingNote": "PLACEHOLDER — replace with your real platform fee percentage",
+        "description": "Create and sell tickets for your event with zero upfront cost.",
+        "features": [
+          "Unlimited free events",
+          "Card + Mobile Money checkout",
+          "QR check-in via @WiamScanBot",
+          "Basic sales dashboard"
+        ],
+        "ctaLabel": "Create an event"
+      },
+      {
+        "name": "Attendee",
+        "price": "Free to buy",
+        "description": "Ticket price plus a small transparent service fee shown before checkout.",
+        "features": [
+          "Instant QR ticket via Telegram",
+          "Pay by card or Mobile Money",
+          "Ticket wallet in @WiamPassBot"
+        ],
+        "ctaLabel": "Find events"
+      }
+    ]
   },
   {
     "slug": "wiamtrade",
@@ -31,6 +169,34 @@
       "Live charts and African currency display",
       "WiamTrade Pro subscription via Paystack"
     ],
-    "accent": "navy"
+    "accent": "navy",
+    "pricingIntro": "Practice mode is free forever. Pro unlocks live broker connections and advanced tools.",
+    "pricingPlans": [
+      {
+        "name": "Practice",
+        "price": "Free",
+        "description": "Trade with $1M in virtual funds on live market charts. No broker account needed.",
+        "features": [
+          "Live crypto, forex, and African stock charts",
+          "$1M virtual practice balance",
+          "Full Telegram bot experience"
+        ],
+        "ctaLabel": "Start practicing"
+      },
+      {
+        "name": "Pro",
+        "price": "USD __ /mo",
+        "billingNote": "PLACEHOLDER — replace with real price",
+        "description": "Connect a real broker and trade live, with advanced tools.",
+        "features": [
+          "Connect Binance and more",
+          "Live trading execution",
+          "Advanced charting tools",
+          "Priority support"
+        ],
+        "ctaLabel": "Upgrade to Pro",
+        "highlighted": true
+      }
+    ]
   }
 ]
