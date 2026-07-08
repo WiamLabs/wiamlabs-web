@@ -126,31 +126,67 @@
       "Organizer dashboard for events and check-in"
     ],
     "accent": "navy",
-    "pricingIntro": "Free to create an event. WiamPass takes a small platform fee only on tickets actually sold.",
+    "pricingIntro": "Three simple organizer plans — Free, Pro, and Premium. Pay in GHS at checkout. Ticket buyers always use WiamPass free.",
     "pricingPlans": [
       {
-        "name": "Organizer — Standard",
-        "price": "__% per ticket sold",
-        "billingNote": "PLACEHOLDER — replace with your real platform fee percentage",
-        "description": "Create and sell tickets for your event with zero upfront cost.",
+        "name": "Free",
+        "price": "Free",
+        "description": "Try WiamPass — sell your first tickets with no monthly fee.",
         "features": [
-          "Unlimited free events",
-          "Card + Mobile Money checkout",
-          "QR check-in via @WiamScanBot",
-          "Basic sales dashboard"
+          "3 events per month",
+          "150 tickets per event",
+          "2 ticket colors (Gold, Graphite)",
+          "3.5% platform fee per paid ticket",
+          "WiamPass ads on your event page",
+          "AI event setup & QR gate scan"
         ],
-        "ctaLabel": "Create an event"
+        "ctaLabel": "Start free",
+        "ctaHref": "https://wiampass.com/organizer/apply"
+      },
+      {
+        "name": "Pro",
+        "price": "₵99 /mo",
+        "billingNote": "Charged in GHS at checkout",
+        "description": "For regular events and growing organizers.",
+        "features": [
+          "Unlimited events",
+          "2,000 tickets per event",
+          "6 ticket colors",
+          "3% platform fee per ticket",
+          "No WiamPass ads",
+          "Promo codes & analytics"
+        ],
+        "ctaLabel": "Get Pro",
+        "highlighted": true,
+        "checkoutPlanKey": "pro"
+      },
+      {
+        "name": "Premium",
+        "price": "₵249 /mo",
+        "billingNote": "Charged in GHS at checkout",
+        "description": "Large events, all ticket colors, lowest fees.",
+        "features": [
+          "Unlimited events & tickets",
+          "10 premium ticket colors",
+          "2.5% platform fee per ticket",
+          "No WiamPass ads",
+          "Priority support"
+        ],
+        "ctaLabel": "Get Premium",
+        "checkoutPlanKey": "premium"
       },
       {
         "name": "Attendee",
         "price": "Free to buy",
-        "description": "Ticket price plus a small transparent service fee shown before checkout.",
+        "description": "Buy tickets with card or Mobile Money — get a QR pass instantly.",
         "features": [
           "Instant QR ticket via Telegram",
           "Pay by card or Mobile Money",
-          "Ticket wallet in @WiamPassBot"
+          "Ticket wallet in @WiamPassBot",
+          "Offline ticket at the gate"
         ],
-        "ctaLabel": "Find events"
+        "ctaLabel": "Browse events",
+        "ctaHref": "https://wiampass.com/events"
       }
     ]
   },

@@ -23,7 +23,7 @@ export const runtime = "nodejs";
 // endpoint must accept/return to plug in here correctly.
 const CHECKOUT_ENDPOINTS: Record<string, string | undefined> = {
   wiamapp: process.env.WIAMAPP_CHECKOUT_URL,
-  // wiampass: process.env.WIAMPASS_CHECKOUT_URL,   // not built yet on WiamPass's side
+  wiampass: process.env.WIAMPASS_CHECKOUT_URL,
   // wiamtrade: process.env.WIAMTRADE_CHECKOUT_URL, // not built yet on WiamTrade's side
 };
 

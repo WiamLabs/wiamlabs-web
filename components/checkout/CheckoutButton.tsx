@@ -59,6 +59,7 @@ export function CheckoutButton({ productSlug, planKey, ctaLabel, highlighted }: 
   }
 
   const isBusinessPlan = planKey.includes("_biz");
+  const isWiamPassPlan = productSlug === "wiampass";
 
   return (
     <div className={styles.checkoutBox}>
@@ -77,11 +78,17 @@ export function CheckoutButton({ productSlug, planKey, ctaLabel, highlighted }: 
       <p className={styles.checkoutHint}>
         Don&rsquo;t have an account yet?{" "}
         <a
-          href={isBusinessPlan ? "https://wiamapp.com/business/apply" : `https://${productSlug}.com/register`}
+          href={
+            isBusinessPlan
+              ? 'https://wiamapp.com/business/apply'
+              : isWiamPassPlan
+                ? 'https://wiampass.com/organizer'
+                : `https://${productSlug}.com/register`
+          }
           target="_blank"
           rel="noreferrer"
         >
-          {isBusinessPlan ? "Apply for Business" : "Register first"}
+          {isBusinessPlan ? 'Apply for Business' : isWiamPassPlan ? 'Apply as organizer' : 'Register first'}
         </a>
         , then come back.
       </p>
