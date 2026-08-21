@@ -12,18 +12,28 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/privacy-policy",
+        destination: "https://sports.wiamlabs.com/privacy-policy",
+        permanent: true,
+      },
+      {
         source: "/privacy-policy.html",
-        destination: "/privacy-policy",
+        destination: "https://sports.wiamlabs.com/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/terms-of-use",
+        destination: "https://sports.wiamlabs.com/terms-of-use",
         permanent: true,
       },
       {
         source: "/terms-of-use.html",
-        destination: "/terms-of-use",
+        destination: "https://sports.wiamlabs.com/terms-of-use",
         permanent: true,
       },
       {
         source: "/terms-and-conditions",
-        destination: "/terms-of-use",
+        destination: "https://sports.wiamlabs.com/terms-of-use",
         permanent: true,
       },
     ];
