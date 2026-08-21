@@ -17,8 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/privacy",
     "/legal/terms",
     "/legal/cookies",
-    "/privacy-policy",
-    "/terms-of-use",
   ];
 
   const productRoutes = products.flatMap((p) => {
