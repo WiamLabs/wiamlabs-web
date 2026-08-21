@@ -11,6 +11,21 @@ const nextConfig = {
         destination: "https://wiamlabs.com/:path*",
         permanent: true,
       },
+      {
+        source: "/privacy-policy.html",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/terms-of-use.html",
+        destination: "/terms-of-use",
+        permanent: true,
+      },
+      {
+        source: "/terms-and-conditions",
+        destination: "/terms-of-use",
+        permanent: true,
+      },
     ];
   },
 };

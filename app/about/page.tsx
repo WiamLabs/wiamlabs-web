@@ -43,8 +43,8 @@ export default function AboutPage() {
           software people use every week — booking a worker, checking a chart, placing a trade.
         </p>
         <p>
-          Martin leads the company. The work is product engineering, support, and keeping both apps
-          running reliably across African networks.
+          Our team leads the company. The work is product engineering, support, and keeping our
+          products running reliably across African networks.
         </p>
         <p>
           This site is the public home for WiamLabs: products, news, press, and contact. Product

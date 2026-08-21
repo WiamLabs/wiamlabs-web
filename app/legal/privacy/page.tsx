@@ -34,7 +34,8 @@ export default function PrivacyPage() {
         <p>
           We use contact submissions to respond to your inquiry. We do not sell personal data.
           Product accounts (WiamApp, WiamTrade) are governed by each product&apos;s own policies
-          on their respective surfaces.
+          on their respective surfaces. WiamSports on Telegram is covered by the{" "}
+          <a href="/privacy-policy">WiamSports Privacy Policy</a>.
         </p>
 
         <h2>Cookies</h2>

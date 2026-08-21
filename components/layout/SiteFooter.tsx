@@ -68,6 +68,12 @@ export function SiteFooter() {
               <li>
                 <Link href="/legal/cookies">Cookies</Link>
               </li>
+              <li>
+                <Link href="/privacy-policy">WiamSports Privacy</Link>
+              </li>
+              <li>
+                <Link href="/terms-of-use">WiamSports Terms</Link>
+              </li>
             </ul>
           </div>
         </div>
